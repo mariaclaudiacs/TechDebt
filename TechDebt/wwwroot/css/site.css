@@ -34,7 +34,6 @@ body {
     padding: 10px 5px;
 }
 
-
 .navbar-nav flex-grow-1 {
     color: antiquewhite;
 }
@@ -68,9 +67,7 @@ tr{
     color: crimson;
 }
 
-@media{
-    width:98%!important;
-}
+
 .vl {
     border-left: 6px solid crimson;
     position: absolute;
@@ -80,3 +77,8 @@ tr{
 
     margin-left: -3px;
     top: 0;
+}
+
+
+.p-2 bd-highlight 1{ padding-right:570px;
+}
