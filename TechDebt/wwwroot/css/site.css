@@ -71,3 +71,12 @@ tr{
 @media{
     width:98%!important;
 }
+.vl {
+    border-left: 6px solid crimson;
+    position: absolute;
+    height: 300px;
+    left: 50%;
+    top:600px;
+
+    margin-left: -3px;
+    top: 0;
