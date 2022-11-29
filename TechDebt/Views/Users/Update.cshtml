@@ -1,0 +1,20 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Users";
+}
+<div>
+    <h3 class="text-center">Alterando Usuários</h3>
+    <form asp-controller="Users" asp-action="Update" method="post">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" asp-for="Nome">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Senha:</label>
+            <input type="password" class="form-control" id="password" asp-for="Senha">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Voltar</a>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+﻿@model UsersModel
+@{
+    ViewData["Title"] = "Usuários";
+}
+<div class="text-center">
+    <h3>Listagem de Usuários</h3>
+    <a type="button" class="btn btn-success float-end" asp-controller="Users" asp-action="Add">Novo Usuário</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.GetUsers())
+            {
+                <tr>
+                    <td>@user.Id.ToString("D5")</td>
+                    <td>@user.Nome</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <div>
+                            <a type="button" class="btn btn-warning" asp-route-id="@user.Id" asp-controller="Users" asp-action="Update">Editar Usuário</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a type="button" class="btn btn-danger" asp-route-id="@user.Id" asp-controller="Users" asp-action="Delete">Deletar Usuário</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,73 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    color: crimson;
+}
+
+body {
+    font-family: monospace;
+    margin-bottom: 60px;
+    border:thin;
+}
+
+.main-body-maria {
+    color: rgb(200, 118, 49);
+    background-color: whitesmoke;
+}
+
+.main-footer-maria{
+    background-color: crimson;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto auto;
+    padding: 10px 5px;
+}
+
+
+.navbar-nav flex-grow-1 {
+    color: antiquewhite;
+}
+
+a{
+    color: navajowhite;
+}
+
+a:hover{
+    color: lightyellow;
+}
+
+.main-header-maria{
+    background-color:crimson;
+}
+
+ul{
+    color:antiquewhite;
+}
+
+tbody{
+    background-color:floralwhite;
+}
+
+thead{
+    background-color:floralwhite;
+    color: saddlebrown;
+}
+
+tr{
+    color: crimson;
+}
+
+@media{
+    width:98%!important;
+}

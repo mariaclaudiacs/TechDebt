@@ -1,0 +1,42 @@
+﻿@model BanksModel
+@{
+	ViewData["Title"] = "Bancos";
+}
+
+<div class="text-center">
+	<h3>Listagem de Bancos</h3>
+	<div>
+		<a type="button" class="btn btn-success float-end" asp-controller="Banks" asp-action="AddBank">Novo</a>
+	</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Taxa de juros pessoal (a.a)</th>
+				<th>Taxa de juros veicular (a.a)</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var bank in Model.GetBanks())
+			{
+				<tr>
+					<td>@bank.Id.ToString("D5")</td>
+					<td>@bank.Nome</td>
+					<td>@bank.Perfee</td>
+					<td>@bank.VehFee</td>
+					<td>
+						<div>
+							<a type="button" class="btn btn-warning" asp-route-id="@bank.Id" asp-controller="Banks" asp-action="UpdateBank">Editar</a>
+						</div>
+					</td>
+					<td>
+						<div>
+							<a type="button" class="btn btn-danger" asp-route-id="@bank.Id" asp-controller="Banks" asp-action="DeleteBank">Deletar</a>
+						</div>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

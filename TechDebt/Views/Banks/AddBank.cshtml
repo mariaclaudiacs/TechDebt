@@ -1,0 +1,26 @@
+﻿@model BankModel
+@{
+    ViewData ["Title"] = "Adicionar Bancos";
+} 
+<div>
+ <h3 class="text-center">Adicionando Bancos</h3>
+ <form asp-controller="Banks" asp-action="AddBank" method="post">
+  <div class="form-group">
+    <label for="name">Nome:</label>
+    <input type="text" class="form-control" id="name" asp-for="Nome">
+  </div>
+    <div class="form-group">
+    <label for="perfee">Taxa de juros pessoal (a.a):</label>
+    <input type="text" class="form-control" asp-for="Perfee">
+  </div>
+  <div class="form-group">
+    <label for="vehfee">Taxa de juros veicular (a.a):</label>
+    <input type="text" class="form-control" id="name" asp-for="VehFee">
+  </div>
+  <div>
+      <br>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      <a class="btn btn-secondary" asp-controller="Banks" asp-action="Index">Voltar</a>
+  </div>
+</form>
+</div>

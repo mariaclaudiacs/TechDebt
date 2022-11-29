@@ -1,0 +1,14 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="text-center">
+    <h3>Confirmação de exclusão</h3>
+    <form asp-controller="Users" asp-action="Delete" method="post">
+        <p>Você tem certeza que quer deletar o usuário @Model.Nome?</p>
+
+        <a class="btn btn-danger"  asp-controller="Users" asp-action="Index">Não</a>
+        <button type="submit" class="btn btn-primary">Sim</button>
+    </form>
+</div>
