@@ -1,0 +1,42 @@
+﻿@model ConsortiumModel
+@{
+    ViewData["Title"] = "Consórcios";
+}
+<form method="post">
+    <div class="form-group col-md-3">
+        <label for="inputCategory">Categoria</label>
+        <select id="inputCategory" class="form-select">
+            <option selected>Imóvel</option>
+            <option selected>Automóvel</option>
+            <option selected>Eletrodomésticos</option>
+            <option selected>Contratação de Serviços</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="inputName">Nome</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Ex: Usuario...">
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Ex: usuario@users.com">
+    </div>
+
+    <div class="form-group">
+        <label for="inputNumber">Numero de Telefone</label>
+        <input type="text" class="form-control" id="inputNumber" placeholder="Ex: (+99)99999-9999">
+    </div>
+
+    <div class="form-group">
+        <label for="inputCEP">CEP</label>
+        <input type="text" class="form-control" id="inputCEP" placeholder="Ex: 99999-009">
+    </div>
+
+    <div class="form-group">
+        <label for="inputCPF">CPF</label>
+        <input type="text" class="form-control" id="inputCPF" placeholder="Ex: 999.999.999-99">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Solicitar Proposta</button>
+
+</form>

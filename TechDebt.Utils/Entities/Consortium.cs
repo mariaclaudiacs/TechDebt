@@ -10,7 +10,7 @@ namespace TechDebt.Utils.Entities
 {
     public class Consortium
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Number { get; set; }
         public string Email { get; set; }
@@ -24,7 +24,7 @@ namespace TechDebt.Utils.Entities
         {
             using (var conn = new SqlConnection(DBInfo.DBConnection))
             {
-                var cmd = new SqlCommand($"SELECT  WHERE ID = {id}", conn);
+                var cmd = new SqlCommand($"SELECT NAME, NUMBER, EMAIL, CEP, CPF, DATADENASCIMENTO, CATEGORIA WHERE ID = {id}", conn);
                 conn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -54,7 +54,7 @@ namespace TechDebt.Utils.Entities
 
             using (var conn = new SqlConnection(DBInfo.DBConnection))
             {
-                var cmd = new SqlCommand($"SELECT FROM", conn);
+                var cmd = new SqlCommand($"SELECT ID, NOME, NUMERO, EMAIL, CEP, CPF, DATANASCIMENTO, CATEGORIA FROM CONSORCIOS", conn);
                 conn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -78,6 +78,36 @@ namespace TechDebt.Utils.Entities
                 }
             }
             return list;
+        }
+        public void Create()
+        {
+            using (var conn = new SqlConnection(DBInfo.DBConnection))
+            {
+                var cmd = new SqlCommand($"INSERT INTO CONSORCIOS (ID, NOME, NUMERO, EMAIL, CEP, CPF, DATANASCIMENTO, CATEGORIA) VALUES (NEXT VALUE FOR CONSORCIOS_SEQ, '{Name}','{Number}', '{Email}', '{CEP}', '{CPF}', '{BornBirth}', '{Category}')", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void Update()
+        {
+            using (var conn = new SqlConnection(DBInfo.DBConnection))
+            {
+                var querry = $"UPDATE CONSORCIOS SET NOME = '{Name}', NUMERO = '{Number}', EMAIL = '{Email}', CEP = '{CEP}', CPF = '{CPF}', DATANASCIMENTO = '{BornBirth}', CATEGORIA = '{Category}' WHERE ID = {Id}";
+                var cmd = new SqlCommand(querry, conn);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Delete()
+        {
+            using (var conn = new SqlConnection(DBInfo.DBConnection))
+            {
+                var cmd = new SqlCommand($"DELETE FROM CONSORCIOS WHERE ID = {Id}", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
