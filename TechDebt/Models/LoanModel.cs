@@ -2,7 +2,8 @@
 {
     public class LoanModel
     {
-		public double Perfee { get; set; }
+		// valor do perfee aqui, só para testes
+		public double Perfee = 2.3;
 		public double Valor { get; set; }
 		public int Anos { get; set; }
 		public double a { get; set; }

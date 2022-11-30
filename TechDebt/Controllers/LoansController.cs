@@ -10,7 +10,6 @@ namespace TechDebt.Controllers
             return View();
         }
 
-        [HttpPost]
         public IActionResult Simulador()
         {
             var model = new LoanModel();
@@ -20,7 +19,12 @@ namespace TechDebt.Controllers
         [HttpPost]
         public IActionResult Simulador(LoanModel loan)
         {
-            loan.Calculo();
+            ModelState.Clear();
+            loan.a = 1 + (loan.Perfee / 10);
+            loan.b = Math.Pow(loan.a, loan.Anos);
+            loan.valorTotalPago = loan.b * loan.Valor;
+            loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+            loan.valorJuros = loan.valorTotalPago - loan.Valor;
             return View(loan);
         }
 
