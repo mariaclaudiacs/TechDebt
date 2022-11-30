@@ -2,68 +2,72 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    <h1 class="display-4">Bem-vindo!</h1>
-    <p>
-        O simulador de empréstimo TechDebt contém em sua estrutura taxas de bancos específicos — isto é,
-        <br>
-        visando uma melhor opção para o seu bolso nas modalidades pessoal e veicular!
-    </p>
-    <br>
-   <div class="text-right">
-	<table style="width:800px;" class="table table-striped">
-		<thead>
-			<tr>
-				<th>Banco</th>
-				<th>Taxa de juros pessoal (a.a)</th>
-				<th>Taxa de juros veicular (a.a)</th>
-			</tr>
-		</thead>
-		<tbody>
-				<tr id="caixaBank">
-                    <td>Caixa Econômica Federal</td>
-                    <td>26,00%</td>
-                    <td>18,00%</td>
-				</tr>
-                <tr>
-                    <td>Itaú Unibanco</td>
-                    <td>72,00%</td>
-                    <td>23,00%</td>
-				</tr>
-                <tr>
-                    <td id="santanderBank">Banco Santander</td>
-                    <td>77,00%</td>
-                    <td>17,00%</td>
-                </tr>
-                <tr>
-                    <td>Banco Bradesco</td>
-                    <td>107,00%</td>
-                    <td>24,00%</td>
-                </tr>
-		</tbody>
-	</table>
-    <div class="vl"></div>  
-</div>
-    <form class="form-row" method="post">
-        <div class="col-md-3">
-            <label for="inputState" class="form-label">Indique o banco desejado:</label>
-            <select id="inputState" class="form-select">
-                <option>Caixa Econômica Federal</option>
-                <option>Itaú Unibanco</option>
-                <option>Banco Santander</option>
-                <option>Banco Bradesco</option>
-            </select>
+<div class="d-flex justify-content-center">
+    <div class="mainContainer">
+        <div id="div1" class="sideContainer">
+            <h1 class="display-4">Bem-vindo!</h1>
+            <p>
+                O simulador de empréstimo TechDebt contém em sua estrutura taxas de bancos específicos — isto é,
+                <br>
+                visando uma melhor opção para o seu bolso nas modalidades pessoal e veicular!
+            </p>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Banco</th>
+                        <th>Taxa de juros pessoal (a.a)</th>
+                        <th>Taxa de juros veicular (a.a)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="caixaBank">
+                        <td>Caixa Econômica Federal</td>
+                        <td>26,00%</td>
+                        <td>18,00%</td>
+                    </tr>
+                    <tr>
+                        <td>Itaú Unibanco</td>
+                        <td>72,00%</td>
+                        <td>23,00%</td>
+                    </tr>
+                    <tr>
+                        <td id="santanderBank">Banco Santander</td>
+                        <td>77,00%</td>
+                        <td>17,00%</td>
+                    </tr>
+                    <tr>
+                        <td>Banco Bradesco</td>
+                        <td>107,00%</td>
+                        <td>24,00%</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col-md-3">
-            <label for="inputState" class="form-label">Indique a modalidade:</label>
-            <select id="inputState" class="form-select">
-                <option value="1">Pessoal</option>
-                <option value="2">Veicular</option>
-            </select>
+        <div class="separador"></div>
+        <div id="div2" class="sideContainer">
+            <form class="form-row" method="post">
+                <div>
+                    <label for="inputState" class="form-label">Indique o banco desejado:</label>
+                    <select id="inputState" class="form-select">
+                        <option>Caixa Econômica Federal</option>
+                        <option>Itaú Unibanco</option>
+                        <option>Banco Santander</option>
+                        <option>Banco Bradesco</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputState" class="form-label">Indique a modalidade:</label>
+                    <select id="inputState" class="form-select">
+                        <option value="1">Pessoal</option>
+                        <option value="2">Veicular</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <button style="color:burlywood; background-color:darkred; position:relative; left:70px;" type="submit" class="btn btn-primary">Calcular</button>
+                </div>
+            </form>
         </div>
-        <br>
-        <div class="col-2">
-            <button style="color:burlywood; background-color:darkred; position:relative; left:70px;" type="submit" class="btn btn-primary">Calcular</button>
-        </div>
-    </form>
+    </div>
 </div>

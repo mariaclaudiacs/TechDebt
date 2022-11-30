@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -17,7 +17,7 @@ html {
 body {
     font-family: monospace;
     margin-bottom: 60px;
-    border:thin;
+    border: thin;
 }
 
 .main-body-maria {
@@ -25,7 +25,7 @@ body {
     background-color: whitesmoke;
 }
 
-.main-footer-maria{
+.main-footer-maria {
     background-color: crimson;
     position: absolute;
     bottom: 0;
@@ -38,47 +38,97 @@ body {
     color: antiquewhite;
 }
 
-a{
+a {
     color: navajowhite;
 }
 
-a:hover{
-    color: lightyellow;
+    a:hover {
+        color: lightyellow;
+    }
+
+.main-header-maria {
+    background-color: crimson;
 }
 
-.main-header-maria{
-    background-color:crimson;
+ul {
+    color: antiquewhite;
 }
 
-ul{
-    color:antiquewhite;
+tbody {
+    background-color: floralwhite;
 }
 
-tbody{
-    background-color:floralwhite;
-}
-
-thead{
-    background-color:floralwhite;
+thead {
+    background-color: floralwhite;
     color: saddlebrown;
 }
 
-tr{
+tr {
     color: crimson;
 }
 
 
 .vl {
     border-left: 6px solid crimson;
-    position: absolute;
-    height: 300px;
+    height: 700px;
     left: 50%;
-    top:600px;
-
-    margin-left: -3px;
-    top: 0;
+    width: 400px;
+    position: absolute;
+    top: 130px;
 }
 
 
-.p-2 bd-highlight 1{ padding-right:570px;
+.p-2 bd-highlight 1 {
+    padding-right: 570px;
+}
+
+.HomeText {
+    position: absolute;
+    left: 38px;
+    text-align: center
+}
+
+#TableHome {
+    position: absolute;
+    left: 70px;
+    top: 250px;
+}
+
+#ButtonStyle {
+    color: burlywood;
+    background-color: darkred;
+    position: absolute;
+    left: 70px; 
+    top: 200px;
+}
+
+#OptionsBank {
+    position: absolute;
+    width: 600px;
+    top: 480px;
+    left: 80px;
+}
+
+.separador {
+    background-color: crimson;
+    width: 8px;
+}
+
+.mainContainer {
+    display: flex;
+
+}
+
+.sideContainer {
+    padding: 6px;
+    max-width: 49%;
+    min-width:49%;
+    display: inline;
+    background-color: #fff7eb;
+    border: 5px solid brown;
+   align-items:center;
+}
+#div1{
+}
+#div2 {
 }
