@@ -15,8 +15,9 @@ namespace TechDebt.Utils.Database
         /// User: Usuário de login no banco
         /// Password: Senha de login no banco
         /// </summary>
-        public const string DBConnection = @"Data Source=BUE206D03\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=Senac@2021;";
+        //public const string DBConnection = @"Data Source=BUE206D03\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=Senac@2021;";
         //public const string DBConnection = @"Data Source=BUE205D017\SQLEXPRESS;Initial catalog=TechStudents_DB;User=sa;Password=Senac@2021;Trusted_Connection=True;";
+        public const string DBConnection = @"Data Source=BUE302D43\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=Senac@2021;";
 
         public static void TestarBanco()
         {
