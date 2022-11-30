@@ -1,83 +1,47 @@
-﻿@model ConsortiumModel
+﻿@model ConsortiumsModel
 @{
     ViewData["Title"] = "Consórcios";
 }
-<form >
-    <div class="form-group col-md-4">
-        <label for="inputCategory">Categoria</label>
-        <select id="inputCategory" class="form-control">
-            <option selected>Imóvel</option>
-            <option selected>Automóvel</option>
-            <option selected>Eletrodomésticos</option>
-            <option selected>Contratação de Serviços</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="inputName">Nome</label>
-        <input type="text" class="form-control" id="inputName" placeholder="Ex: Usuario...">
-    </div>
-
-    <div class="form-group">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Ex: usuario@users.com">
-    </div>
-
-    <div class="form-group">
-        <label for="inputNumber">Numero de Telefone</label>
-        <input type="text" class="form-control" id="inputNumber" placeholder="Ex: (+99)99999-9999">
-    </div>
-
-    <div class="form-group">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP" placeholder="Ex: 99999-009">
-    </div>
-
-    <div class="form-group">
-        <label for="inputCPF">CPF</label>
-        <input type="text" class="form-control" id="inputCPF" placeholder="Ex: 999.999.999-99">
-    </div>
-    <template>
-        <div>
-            <label for="example-input">Escolha a data de nascimento</label>
-            <b-input-group class="mb-3">
-                <b-form-input id="example-input"
-                              v-model="value"
-                              type="text"
-                              placeholder="YYYY-MM-DD"
-                              autocomplete="off"></b-form-input>
-                <b-input-group-append>
-                    <b-form-datepicker v-model="value"
-                                       button-only
-                                       right
-                                       locale="en-US"
-                                       aria-controls="example-input"
-                                       context="onContext"></b-form-datepicker>
-                </b-input-group-append>
-            </b-input-group>
-            <p class="mb-1">Value: '{{ value }}'</p>
-            <p class="mb-1">Selected: '{{ selected }}'</p>
-            <p>Formatted: '{{ formatted }}'</p>
-        </div>
-    </template>
-
-    <button type="submit" class="btn btn-primary">Solicitar Proposta</button>
-</form>
-<script>
-    export default {
-        data() {
-            return {
-                value: '',
-                formatted: '',
-                selected: ''
+<div class="text-center">
+    <h3>Listagem de Consórcios</h3>
+    <a type="button" class="btn btn-success float-end" asp-controller="Consortiums" asp-action="Add">Novo Consórcio</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>CEP</th>
+                <th>CPF</th>
+                <th>Data de nascimento</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.GetConsortiums())
+            {
+                <tr>
+                    <td>@user.Id.ToString("D5")</td>
+                    <td>@user.Name</td>
+                    <td>@user.Number</td>
+                    <td>@user.Email</td>
+                    <td>@user.CEP</td>
+                    <td>@user.CPF</td>
+                    <td>@user.BornBirth</td>
+                    <td>@user.Category</td>
+                    <td>
+                        <div>
+                            <a type="button" class="btn btn-warning" asp-route-id="@user.Id" asp-controller="Consortium" asp-action="Update">Editar Consórcio</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a type="button" class="btn btn-danger" asp-route-id="@user.Id" asp-controller="Consortium" asp-action="Delete">Deletar Consórcio</a>
+                        </div>
+                    </td>
+                </tr>
             }
-        },
-        methods: {
-            onContext(ctx) {
-                // The date formatted in the locale, or the `label-no-date-selected` string
-                this.formatted = ctx.selectedFormatted
-                // The following will be an empty string until a valid date is entered
-                this.selected = ctx.selectedYMD
-            }
-        }
-    }
-</script>
+        </tbody>
+    </table>
+</div>

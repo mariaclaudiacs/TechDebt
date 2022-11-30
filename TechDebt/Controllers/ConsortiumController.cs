@@ -4,7 +4,7 @@ using TechDebt.Utils.Entities;
 
 namespace TechDebt.Controllers
 {
-    public class ConsortiumsController : Controller
+    public class ConsortiumController : Controller
     {
         public IActionResult Index()
         {
