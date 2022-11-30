@@ -39,11 +39,11 @@ body {
 }
 
 a{
-    color: navajowhite;
+   color:crimson;
 }
 
 a:hover{
-    color: lightyellow;
+    color:goldenrod;
 }
 
 .main-header-maria{
@@ -51,7 +51,7 @@ a:hover{
 }
 
 ul{
-    color:antiquewhite;
+    color:brown;
 }
 
 tbody{
@@ -80,5 +80,14 @@ tr{
 }
 
 
-.p-2 bd-highlight 1{ padding-right:570px;
+.p-2 bd-highlight{ padding-right:570px;
+}
+
+h5{
+    text-align:center;
+}
+
+.bd-highlight {
+   background-color:antiquewhite;
+   border-color:darkgoldenrod;
 }
