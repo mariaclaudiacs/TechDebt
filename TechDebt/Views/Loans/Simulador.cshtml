@@ -3,56 +3,67 @@
 @using TechDebt.Utils.Entities
 @model LoanModel
 @{
-	ViewData["Title"] = "Simulador";
+    ViewData["Title"] = "Simulador";
 }
 
 <div>
-	<h3>Simulação de Empréstimo</h3>
-	<form asp-controller="Emprestimo" asp-action="Simulador" method="post">
-  <div class="mb-3">
-	<label for="valorEmprestimo" class="form-label">Valor do Empréstimo</label>
-	<input asp-for="Valor" type="text" class="form-control" id="valorEmprestimo">
-  <div class="mb-3">
-	<label for="parcelas" class="form-label" >Número de Anos</label>
-	<input asp-for="Anos" type="number" class="form-control" id="parcelas">
-  </div>
-  <div>
-	  <label for="bancos" class="form-label">Banco:</label>
-	  <select name="bancos" id="bancos">
-		<option value="caixa">Caixa Econômica Federal</option>
-		<option value="itau">Itaú Unibanco</option>
-		<option value="santander">Banco Santander</option>
-		<option value="bradesco">Banco Bradesco</option>
-	</select>
-  </div>
+    <h3 class="text-center">Simulação de Empréstimo</h3>
 
-  <br>
-  <div>
-		<h4>Modalidade</h4>
+    <div class="ContainerSimulador">
+        <div class="FormulárioSimulador">
+            <form asp-controller="Emprestimo" asp-action="Simulador" method="post">
+                <div class="FormularioOptions">
+                    
+                    <label for="valorEmprestimo" class="form-label">Valor do Empréstimo</label>
+                    <input asp-for="Valor" type="text" class="form-control" id="valorEmprestimo">
+                    <div class="mb-3">
+                        <label for="parcelas" class="form-label">Número de Anos</label>
+                        <input asp-for="Anos" type="number" class="form-control" id="parcelas">
+                    </div>
+                    <div class="FormularioButtons">
+                        
+                        <label for="bancos" class="form-label">Banco:</label>
+                        <select name="bancos" id="bancos">
+                            <option value="caixa">Caixa Econômica Federal</option>
+                            <option value="itau">Itaú Unibanco</option>
+                            <option value="santander">Banco Santander</option>
+                            <option value="bradesco">Banco Bradesco</option>
+                        </select>
+                    </div>
 
-		<input type="radio" name="modalidade" value="pessoal"> Pessoal
+                    <br>
+                    <div>
+                        <h4 class="text-center">Modalidade</h4>
 
-		<input type="radio" name="modalidade" value="veicular"> Veicular
-	</div>
-  <br>
-  <button type="submit" class="btn btn-warning" asp-action="Simulador">Conluir</button>
-  <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Voltar</a>
-	<div class="mb-3">
-	<label for="result" class="form-label">Valor do Empréstimo</label>
-	<input asp-for="Valor" type="text" class="form-control" id="result">
+                        <input type="radio" name="modalidade" value="pessoal"> Pessoal
 
-	<label for="result2" class="form-label">Valor da Parcela</label>
-	<input asp-for="valorParcela" type="text" class="form-control" id="result2">
+                        <input type="radio" name="modalidade" value="veicular"> Veicular
+                    </div>
+                    <br>
+                    <div class="FormularioButtons">
+                        <button type="submit" style=" background-color: #2be62b; color: black;" class="btn" asp-action="Simulador">
+                            Concluir
+                        </button>
+                        <a class="btn btn-secondary" style="background-color: #fd3232;" asp-controller="Home" asp-action="Index">Voltar</a>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="result" class="form-label">Valor do Empréstimo</label>
+                        <input asp-for="Valor" type="text" class="form-control" id="result">
 
-	<label for="result3" class="form-label">Total Pago</label>
-	<input asp-for="valorTotalPago" asp-action="" type="text" class="form-control" id="result3">
-	
-	<label for="result4" class="form-label">Juros</label>
-	<input asp-for="valorJuros" asp-action="" type="text" class="form-control" id="result4">
-	
-	
+                        <label for="result2" class="form-label">Valor da Parcela</label>
+                        <input asp-for="valorParcela" type="text" class="form-control" id="result2">
 
-  </div>
-</form>
+                        <label for="result3" class="form-label">Total Pago</label>
+                        <input asp-for="valorTotalPago" asp-action="" type="text" class="form-control" id="result3">
+
+                        <label for="result4" class="form-label">Juros</label>
+                        <input asp-for="valorJuros" asp-action="" type="text" class="form-control" id="result4">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </div>

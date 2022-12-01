@@ -47,7 +47,7 @@
         <div class="separador"></div>
         <div id="div2" class="sideContainer">
             <form class="form-row" method="post">
-                <div>
+                <div class="formulario">
                     <label for="inputState" class="form-label">Indique o banco desejado:</label>
                     <select id="inputState" class="form-select">
                         <option>Caixa Econômica Federal</option>
@@ -55,17 +55,20 @@
                         <option>Banco Santander</option>
                         <option>Banco Bradesco</option>
                     </select>
-                </div>
                 <div>
                     <label for="inputState" class="form-label">Indique a modalidade:</label>
                     <select id="inputState" class="form-select">
                         <option value="1">Pessoal</option>
                         <option value="2">Veicular</option>
                     </select>
+                        <br>
+                    <div class="button">
+                    <a asp-controller="Loans" asp-action="Simulador" id="Colorbutton" class="btn btn-primary">Calcular</a>
+                    </div>
+                </div>
                 </div>
                 <br>
                 <div>
-                    <a asp-controller="Loans" asp-action="Simulador" style="color:burlywood; background-color:darkred; position:relative; left:70px;" type="submit" class="btn btn-primary">Calcular</a>
                 </div>
             </form>
         </div>
