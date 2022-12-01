@@ -1,4 +1,6 @@
-﻿@{
+﻿@model LoanModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -46,18 +48,19 @@
         </div>
         <div class="separador"></div>
         <div id="div2" class="sideContainer">
-            <form class="form-row" method="post">
+            <form asp-controller="Loans" asp-action="Simulador" id="formBancos" class="form-row" method="post">
                 <div class="formulario">
                     <label for="inputState" class="form-label">Indique o banco desejado:</label>
-                    <select id="inputState" class="form-select">
-                        <option>Caixa Econômica Federal</option>
-                        <option>Itaú Unibanco</option>
-                        <option>Banco Santander</option>
-                        <option>Banco Bradesco</option>
+                    <select asp-for="Banco" class="form-select"> 
+                        <option value="caixa">Caixa Econômica Federal</option>
+                        <option value="itau">Itaú Unibanco</option>
+                        <option value="santander">Banco Santander</option>
+                        <option value="bradesco">Banco Bradesco</option>
                     </select>
+                    
                 <div>
-                    <label for="inputState" class="form-label">Indique a modalidade:</label>
-                    <select id="inputState" class="form-select">
+                    <label for="inputState2" class="form-label">Indique a modalidade:</label>
+                    <select id="inputState2" class="form-select">
                         <option value="1">Pessoal</option>
                         <option value="2">Veicular</option>
                     </select>

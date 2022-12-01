@@ -19,15 +19,39 @@ namespace TechDebt.Controllers
         [HttpPost]
         public IActionResult Simulador(LoanModel loan)
         {
-            ModelState.Clear();
-            loan.a = 1 + (loan.Perfee / 10);
-            loan.b = Math.Pow(loan.a, loan.Anos);
-            loan.valorTotalPago = loan.b * loan.Valor;
-            loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-            loan.valorJuros = loan.valorTotalPago - loan.Valor;
-            return View(loan);
+            if (loan.Banco.Equals("caixa"))
+            {
+                ModelState.Clear();
+                loan.a = 1 + (loan.PerfeeCaixa / 100);
+                loan.b = Math.Pow(loan.a, loan.Anos);
+                loan.valorTotalPago = loan.b * loan.Valor;
+                loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                loan.valorJuros = loan.valorTotalPago - loan.Valor;
+
+                return View(loan);
+            }
+            else if (loan.Banco.Equals("itau"))
+            {
+                ModelState.Clear();
+                loan.a = 1 + (loan.PerfeeItau / 100);
+                loan.b = Math.Pow(loan.a, loan.Anos);
+                loan.valorTotalPago = loan.b * loan.Valor;
+                loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                loan.valorJuros = loan.valorTotalPago - loan.Valor;
+
+                return View(loan);
+            }
+            else
+            {
+                ModelState.Clear();
+                loan.a = 1 + (loan.PerfeeSantander / 100);
+                loan.b = Math.Pow(loan.a, loan.Anos);
+                loan.valorTotalPago = loan.b * loan.Valor;
+                loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                loan.valorJuros = loan.valorTotalPago - loan.Valor;
+
+                return View(loan);
+            }
         }
-
-
     }
 }
