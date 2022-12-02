@@ -13,7 +13,7 @@
         <div class="FormulárioSimulador">
             <form asp-controller="Loans" asp-action="Simulador" method="post">
                 <div class="FormularioOptions">
-                    
+                    <input type="hidden" asp-for="Banco"/>
                     <label for="valorEmprestimo" class="form-label">Valor do Empréstimo</label>
                     <input asp-for="Valor" type="text" class="form-control" id="valorEmprestimo">
                     <div class="mb-3">

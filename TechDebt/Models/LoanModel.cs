@@ -1,8 +1,11 @@
-﻿namespace TechDebt.Models
+﻿using static TechDebt.Models.LoanModel;
+using static TechDebt.Utils.Entities.Loan;
+
+namespace TechDebt.Models
 {
     public class LoanModel
     {
-		public double PerfeeCaixa = 26;
+        public double PerfeeCaixa = 26;
 		public double VehfeeCaixa = 18;
 
 		public double PerfeeItau = 72;
@@ -20,7 +23,7 @@
 		public double valorTotalPago { get; set; }
 		public double valorParcela { get; set; }
 		public double valorJuros { get; set; }
-
-		public string Banco = string.Empty;
-	}
+		public Bancos Banco { get; set; }
+		public Modalidades Modalidade { get; set; }
+    }
 }

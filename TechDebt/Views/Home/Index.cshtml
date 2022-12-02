@@ -51,22 +51,28 @@
             <form asp-controller="Loans" asp-action="Simulador" id="formBancos" class="form-row" method="post">
                 <div class="formulario">
                     <label for="inputState" class="form-label">Indique o banco desejado:</label>
-                    <select asp-for="Banco" class="form-select"> 
+                    @*<select asp-for="Banco" class="form-select"> 
                         <option value="caixa">Caixa Econômica Federal</option>
                         <option value="itau">Itaú Unibanco</option>
                         <option value="santander">Banco Santander</option>
                         <option value="bradesco">Banco Bradesco</option>
-                    </select>
-                    
+                    </select>*@
+                    <label for="inputState" class="form-label">Indique o banco desejado:</label>
+                    <select id="inputState" class="form-select"  asp-for="Banco">
+                        <option value="10">Caixa Econômica Federal</option>
+                        <option value="20">Itaú Unibanco</option>
+                        <option value="30">Banco Santander</option>
+                        <option value="40">Banco Bradesco</option>
+                     </select>
                 <div>
                     <label for="inputState2" class="form-label">Indique a modalidade:</label>
-                    <select id="inputState2" class="form-select">
+                    <select id="inputState2" class="form-select" asp-for="Modalidade">
                         <option value="1">Pessoal</option>
                         <option value="2">Veicular</option>
                     </select>
                         <br>
                     <div class="button">
-                    <a asp-controller="Loans" asp-action="Simulador" id="Colorbutton" class="btn btn-primary">Calcular</a>
+                            <button type="submit" id="Colorbutton" class="btn btn-primary">Calcular</button>
                     </div>
                 </div>
                 </div>
