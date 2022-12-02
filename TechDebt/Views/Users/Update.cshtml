@@ -3,6 +3,8 @@
     ViewData["Title"] = "Users";
 }
 <div>
+    <div class="mainupdate">
+        <div class="formsoption">
     <h3 class="text-center">Alterando Usuários</h3>
     <form asp-controller="Users" asp-action="Update" method="post">
         <div class="form-group">
@@ -14,7 +16,11 @@
             <input type="password" class="form-control" id="password" asp-for="Senha">
         </div>
         <br>
+                <div class="ButtonUpd">
         <button type="submit" class="btn btn-primary">Enviar</button>
         <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Voltar</a>
+        </div>
     </form>
+    </div>
+    </div>
 </div>

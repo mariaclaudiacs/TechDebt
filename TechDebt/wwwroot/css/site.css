@@ -192,3 +192,20 @@ display:flex;
     width: 600px;
     text-align: left;
 }
+.ButtonUpd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content:space-between
+}
+.Icon{
+ width:250px;
+ height:60px;
+}
+a.site-logo {
+    background: url(/LogoTech.png) no-repeat top left;
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-indent: -9999px; /*hides the link text*/
+} 
