@@ -174,3 +174,21 @@ tr {
     padding-left: 3.5rem;
     z-index: 3;
 }
+.mainupdate{
+display:flex;
+       align-items: center;
+    justify-content: center;
+}
+.formupdate {
+  
+  
+}
+.formsoption {
+    background-color: #fff7eb;
+    border: 1px solid brown;
+    padding: 30px;
+    background-color: #fff7eb;
+    border: 5px solid brown;
+    width: 600px;
+    text-align: left;
+}
