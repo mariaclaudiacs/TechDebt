@@ -3,23 +3,30 @@
     ViewData["Title"] = "Usuários";
 }
 <div>
-    <h3 class="text-center">Creating Users</h3>
-    <form asp-controller="Users" asp-action="Add" method="post">
-        <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" class="form-control" id="name" asp-for="Nome">
+    <div class="mainupdate">
+        <div class="formsoption">
+            <h3 class="text-center">Criar Usuário</h3>
+
+            <form asp-controller="Users" asp-action="Add" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" asp-for="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Email:</label>
+                    <input type="text" class="form-control" id="email" asp-for="Email">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Senha:</label>
+                    <input type="password" class="form-control" id="password" asp-for="Senha">
+                </div>
+                <br>
+                <div class="ButtonUpd">
+                    <button type="submit" class="btn btn-primary">Criar</button>
+                    <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Voltar</a>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Email:</label>
-            <input type="text" class="form-control" id="email" asp-for="Email">
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Senha:</label>
-            <input type="password" class="form-control" id="password" asp-for="Senha">
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Back</a>
-    </form>
+    </div>
 </div>

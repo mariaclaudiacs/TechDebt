@@ -24,7 +24,7 @@ namespace TechDebt.Utils.Entities
         {
             using (var conn = new SqlConnection(DBInfo.DBConnection))
             {
-                var cmd = new SqlCommand($"SELECT NAME, NUMBER, EMAIL, CEP, CPF, DATADENASCIMENTO, CATEGORIA WHERE ID = {id}", conn);
+                var cmd = new SqlCommand($"SELECT ID, NOME, NUMERO, EMAIL, CEP, CPF, DATANASCIMENTO, CATEGORIA WHERE ID = {id}", conn);
                 conn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())

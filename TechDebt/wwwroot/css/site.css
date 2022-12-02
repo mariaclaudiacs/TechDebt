@@ -116,19 +116,94 @@ tr {
 
 .mainContainer {
     display: flex;
-
+   
 }
 
 .sideContainer {
     padding: 6px;
-    max-width: 49%;
-    min-width:49%;
+    width:90%;
     display: inline;
     background-color: #fff7eb;
     border: 5px solid brown;
-   align-items:center;
+    align-items: center;
+    justify-content: center;
 }
-#div1{
-}
+
 #div2 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1000px;
 }
+
+.formulario{
+    width:400px;
+}
+.button {
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Colorbutton {
+    color: burlywood;
+    background-color: darkred
+}
+.ContainerSimulador {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}
+
+.FormularioOptions {
+    background-color: #fff7eb;
+    border: 1px solid brown;
+
+    padding: 30px;
+    background-color: #fff7eb;
+    border: 5px solid brown;
+    width: 400px;
+    text-align: left;
+}
+.FormularioButtons{
+    text-align:center;
+
+}
+.form-floating > .bi-calendar-date + .datepicker_input + label {
+    padding-left: 3.5rem;
+    z-index: 3;
+}
+.mainupdate{
+display:flex;
+       align-items: center;
+    justify-content: center;
+}
+
+}
+.formsoption {
+    background-color: #fff7eb;
+    border: 1px solid brown;
+    padding: 30px;
+    background-color: #fff7eb;
+    border: 5px solid brown;
+    width: 600px;
+    text-align: left;
+}
+.ButtonUpd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content:space-between
+}
+.Icon{
+ width:250px;
+ height:60px;
+}
+a.site-logo {
+    background: url(/LogoTech.png) no-repeat top left;
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-indent: -9999px; /*hides the link text*/
+} 

@@ -1,15 +1,18 @@
-﻿@{
+﻿@model LoanModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="d-flex justify-content-center">
     <div class="mainContainer">
         <div id="div1" class="sideContainer">
-            <h1 class="display-4">Bem-vindo!</h1>
+            <h1 class="display-4 text-center">Bem-vindo!</h1>
             <p>
-                O simulador de empréstimo TechDebt contém em sua estrutura taxas de bancos específicos — isto é,
+                &nbsp&nbsp O simulador de empréstimo TechDebt contém em sua estrutura taxas de bancos específicos.
+                
                 <br>
-                visando uma melhor opção para o seu bolso nas modalidades pessoal e veicular!
+                &nbsp Isto é, visando uma melhor opção para o seu bolso nas modalidades pessoal e veicular!
             </p>
             <br>
             <table class="table table-striped">
@@ -46,26 +49,36 @@
         </div>
         <div class="separador"></div>
         <div id="div2" class="sideContainer">
-            <form class="form-row" method="post">
-                <div>
+            <form asp-controller="Loans" asp-action="Simulador" id="formBancos" class="form-row" method="post">
+                <div class="formulario">
                     <label for="inputState" class="form-label">Indique o banco desejado:</label>
-                    <select id="inputState" class="form-select">
-                        <option>Caixa Econômica Federal</option>
-                        <option>Itaú Unibanco</option>
-                        <option>Banco Santander</option>
-                        <option>Banco Bradesco</option>
-                    </select>
-                </div>
+                    @*<select asp-for="Banco" class="form-select"> 
+                        <option value="caixa">Caixa Econômica Federal</option>
+                        <option value="itau">Itaú Unibanco</option>
+                        <option value="santander">Banco Santander</option>
+                        <option value="bradesco">Banco Bradesco</option>
+                    </select>*@
+                    <label for="inputState" class="form-label">Indique o banco desejado:</label>
+                    <select id="inputState" class="form-select"  asp-for="Banco">
+                        <option value="10">Caixa Econômica Federal</option>
+                        <option value="20">Itaú Unibanco</option>
+                        <option value="30">Banco Santander</option>
+                        <option value="40">Banco Bradesco</option>
+                     </select>
                 <div>
-                    <label for="inputState" class="form-label">Indique a modalidade:</label>
-                    <select id="inputState" class="form-select">
+                    <label for="inputState2" class="form-label">Indique a modalidade:</label>
+                    <select id="inputState2" class="form-select" asp-for="Modalidade">
                         <option value="1">Pessoal</option>
                         <option value="2">Veicular</option>
                     </select>
+                        <br>
+                    <div class="button">
+                            <button type="submit" id="Colorbutton" class="btn btn-primary">Calcular</button>
+                    </div>
+                </div>
                 </div>
                 <br>
                 <div>
-                    <a asp-controller="Loans" asp-action="Simulador" style="color:burlywood; background-color:darkred; position:relative; left:70px;" type="submit" class="btn btn-primary">Calcular</a>
                 </div>
             </form>
         </div>
