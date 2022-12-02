@@ -180,17 +180,6 @@ tr {
     justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.formupdate {
-=======
->>>>>>> 9f688595b6093df25fe84cddc217c7091cd6ba7e
-}
->>>>>>> 1159da942b4dcb6021b8120092bdba7e15672cf4
->>>>>>> 8bbc4ec87d04504d45e4daaa2d26c03787098045
 
 .formsoption {
     background-color: #fff7eb;
@@ -359,12 +348,9 @@ h3{
 .ButtonUpd {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-    justify-content:center;
-=======
-    justify-content: center;
-    justify-content:space-between;
->>>>>>> 8bbc4ec87d04504d45e4daaa2d26c03787098045
+
+    justify-content:space-between
+
 }
 .Icon{
  width:250px;

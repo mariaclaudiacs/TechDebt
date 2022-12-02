@@ -9,7 +9,7 @@
     <form asp-controller="Users" asp-action="Update" method="post">
         <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" class="form-control" id="name" asp-for="Nome">
+            <input type="text" class="form-control" id="name"style="width:530px;height:38.48px;" asp-for="Nome">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Senha:</label>
@@ -17,8 +17,8 @@
         </div>
         <br>
                 <div class="ButtonUpd">
-        <button type="submit" class="btn btn-primary">Enviar</button>
-        <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Voltar</a>
+                    <button id="botao1Simulacao" type="submit" class="btn" style="position:relative;left:0px">Enviar</button>
+                    <a id="voltarSimulacao" class="btn " 1 asp-controller="Users" asp-action="Index" style="position:relative" ;>Voltar</a>
         </div>
     </form>
     </div>

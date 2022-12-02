@@ -8,7 +8,7 @@
     <form asp-controller="Users" asp-action="Delete" method="post">
         <p>Você tem certeza que quer deletar o usuário @Model.Nome?</p>
 
-        <a class="btn btn-danger"  asp-controller="Users" asp-action="Index">Não</a>
-        <button type="submit" class="btn btn-primary">Sim</button>
+        <a id="botaoExcluirConfirmacao" class="btn" asp-controller="Users" asp-action="Index">Não</a>
+        <button id="botaoConfirmarExclusao" type="submit" class="btn">Sim</button>
     </form>
 </div>
