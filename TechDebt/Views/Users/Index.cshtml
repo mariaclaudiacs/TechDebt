@@ -4,13 +4,17 @@
 }
 <div class="text-center">
     <h3>Listagem de Usuários</h3>
-    <a type="button" class="btn btn-success float-end" asp-controller="Users" asp-action="Add">Novo Usuário</a>
+    <button id="botaoNovoBanco" type="button" class="btn btn-success float-end" asp-controller="Users" asp-action="Add">Novo Usuário</button>
+    <br>
+    <br>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
+                <th>Edição de registro</th>
+                <th>Exclusão de registro</th>
             </tr>
         </thead>
         <tbody>
@@ -22,12 +26,12 @@
                     <td>@user.Email</td>
                     <td>
                         <div>
-                            <a type="button" class="btn btn-warning" asp-route-id="@user.Id" asp-controller="Users" asp-action="Update">Editar Usuário</a>
+                            <button id="botaoEditarBanco" type="button" class="btn" asp-route-id="@user.Id" asp-controller="Users" asp-action="Update">Editar Usuário</button>
                         </div>
                     </td>
                     <td>
                         <div>
-                            <a type="button" class="btn btn-danger" asp-route-id="@user.Id" asp-controller="Users" asp-action="Delete">Deletar Usuário</a>
+                            <button id="botaoExcluirBanco" type="button" class="btn" asp-route-id="@user.Id" asp-controller="Users" asp-action="Delete">Deletar Usuário</button>
                         </div>
                     </td>
                 </tr>
