@@ -4,21 +4,28 @@
 }
 <div>
     <h3 class="text-center">Alterando Bancos</h3>
+    <div class="mainupdate"> 
+        <div class="formupdate"> 
     <form asp-controller="Banks" asp-action="UpdateBank" method="post">
+            <div class="formsoption">
         <div class="form-group">
+
             <label for="name">Nome:</label>
             <input type="text" class="form-control" id="name" asp-for="Nome">
         </div>
         <div class="form-group">
-            <label for="tjpessoalam">Taxa de Juros pessoal a.m:</label>
+            <label for="tjpessoalam">Taxa de Juros pessoal a.a:</label>
             <input type="text" class="form-control" id="tjpessoal" asp-for="Perfee">
         </div>
         <div>
-            <label for="tjveicularam">Taxa de Juros veicular a.m:</label>
+            <label for="tjveicularam">Taxa de Juros veicular a.a:</label>
             <input type="text" class="form-control" id="tjveicular" asp-for="VehFee">
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Enviar</button>
         <a class="btn btn-secondary" asp-controller="Banks" asp-action="Index">Voltar</a>
     </form>
+            </div>
+            </div>
+    </div>
 </div>
