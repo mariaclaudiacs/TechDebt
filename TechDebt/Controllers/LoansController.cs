@@ -10,7 +10,7 @@ namespace TechDebt.Controllers
             return View();
         }
 
-        [HttpPost]
+      
         public IActionResult Simulador()
         {
             var model = new LoanModel();
