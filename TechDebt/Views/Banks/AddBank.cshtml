@@ -5,7 +5,6 @@
 <h3 class="text-center">Adicionando Bancos</h3>
 <div class="mainupdate">
 <div class="divAdicionandoBanco">
-    
     <form asp-controller="Banks" id="formularioAdicionarBanco" asp-action="AddBank" method="post">
         <div class="form-group">
             <label for="name">Nome:</label>
@@ -22,8 +21,8 @@
         <div>
             <br>
                 <div class="ButtonUpd">
-            <button id="botao1CriacaoBanco" type="submit" class="btn">Enviar</button>               
-            <button id="botao2CriacaoBanco" class="btn" asp-controller="Banks" asp-action="Index">Voltar</button>
+            <button id="botao1Simulacao" type="submit" class="btn" style="position:relative; left:30px; width:80px;">Criar</button>
+             <a id="voltarSimulacao" class="btn" asp-controller="Users" asp-action="Index" style="position:relative; right:20px;">Voltar</a>
             </div>
         </div>
     </form>

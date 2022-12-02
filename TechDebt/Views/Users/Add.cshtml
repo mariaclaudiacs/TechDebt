@@ -23,22 +23,8 @@
                 </div>
                 <br>
                 <div class="ButtonUpd">
-                    <button type="submit" class="btn btn-primary">Criar</button>
-                    <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Voltar</a>
+                    <button id="botao1Simulacao" type="submit" class="btn" style="position:relative; left:30px; width:80px;">Criar</button>
+                    <a id="voltarSimulacao" class="btn" asp-controller="Users" asp-action="Index" style="position:relative; right:20px;">Voltar</a>
                 </div>
             </form>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Email:</label>
-            <input type="text" class="form-control" id="email" asp-for="Email">
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Senha:</label>
-            <input type="password" class="form-control" id="password" asp-for="Senha">
-        </div>
-        <br>
-        <button id="botao1Simulacao" type="submit" class="btn">Enviar</button>
-        <button id="voltarSimulacao"class="btn" asp-controller="Users" asp-action="Index">Voltar</button>
-    </div>
 </div>

@@ -23,7 +23,7 @@ namespace TechDebt.Utils.Database
         //public const string DBConnection = @"Data Source=BUE106D0015\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=Senac@2021;";
         //public const string DBConnection = @"Data Source=;Initial catalog=DadosMTM;User=sa;Password=;";
 
-        public const string DBConnection = @"Data Source=DESKTOP-PNGJTIR\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=sa;";
+        public const string DBConnection = @"Data Source=DESKTOP-3MAQE1O\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=sa;";
         //public const string DBConnection = @"Data Source=BUE106D011\SQLEXPRESS;Initial catalog=DadosMTM;User=sa;Password=Senac@2021;";
 
 
