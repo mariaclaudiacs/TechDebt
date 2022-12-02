@@ -104,6 +104,8 @@ tr {
 
 .mainContainer {
     display: flex;
+    
+    
 }
 
 .sideContainer {
@@ -171,22 +173,16 @@ tr {
     justify-content: center;
 }
 
-<<<<<<< HEAD
-.formupdate {
-=======
->>>>>>> 9f688595b6093df25fe84cddc217c7091cd6ba7e
-}
 
 .formsoption {
     background-color: #fff7eb;
+    width: 600px;
+    background-color: #fff7eb;
     border: 1px solid brown;
     padding: 30px;
-    background-color: #fff7eb;
     border: 5px solid brown;
-    width: 600px;
     text-align: left;
 }
-<<<<<<< HEAD
 
 #botao1Simulacao {
     background-color: coral;
@@ -278,11 +274,14 @@ input#Perfee.form-control {
     width: 450px;
 }
 
-.divAdicionandoBanco{
-    position:relative;
-    left:420px;
-    top:50px;
-    font-family:monospace;
+.divAdicionandoBanco {
+    font-family: monospace;
+    background-color: #fff7eb;
+    padding: 30px;
+    border: 5px solid brown;
+    text-align: left;
+    align-items:center;
+    justify-content:center
 }
 
 h3{
@@ -339,12 +338,10 @@ h3{
         background-color: darkorange;
         color: lightyellow;
     }
-=======
 .ButtonUpd {
     display: flex;
     align-items: center;
-    justify-content: center;
-    justify-content:space-between
+    justify-content:center;
 }
 .Icon{
  width:250px;
@@ -357,4 +354,3 @@ a.site-logo {
     height: 100px;
     text-indent: -9999px; /*hides the link text*/
 } 
->>>>>>> 9f688595b6093df25fe84cddc217c7091cd6ba7e
