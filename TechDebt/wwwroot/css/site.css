@@ -180,7 +180,7 @@ display:flex;
     justify-content: center;
 }
 
-}
+
 .formsoption {
     background-color: #fff7eb;
     border: 1px solid brown;
@@ -194,7 +194,7 @@ display:flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content:space-between
+    justify-content:space-between;
 }
 .Icon{
  width:250px;
