@@ -21,82 +21,17 @@ namespace TechDebt.Controllers
         [HttpPost]
         public IActionResult Simulador(LoanModel loan)
         {
-            if (Modalidades.Pessoal == Modalidades.Pessoal)
+            switch (loan.Modalidade)
             {
-                switch (loan.Banco)
-                {
-                    case Bancos.Caixa:
-                        loan.a = 1 + (loan.PerfeeCaixa / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
+                case Modalidades.Pessoal:
+                    loan.CalculoPerfee(loan);
+                    break;
 
-                    case Bancos.Itau:
-                        loan.a = 1 + (loan.PerfeeItau / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-
-                    case Bancos.Santander:
-                        loan.a = 1 + (loan.PerfeeSantander / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-
-                    case Bancos.Bradesco:
-                        loan.a = 1 + (loan.PerfeeBradesco / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-                }
+                case Modalidades.Veicular:
+                    loan.CalculoVehfee(loan);
+                    break;
             }
-
-            if (Modalidades.Veicular == Modalidades.Veicular)
-            {
-                switch (loan.Banco)
-                {
-                    case Bancos.Caixa:
-                        loan.a = 1 + (loan.VehfeeCaixa / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-
-                    case Bancos.Itau:
-                        loan.a = 1 + (loan.VehfeeItau / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-
-                    case Bancos.Santander:
-                        loan.a = 1 + (loan.VehfeeSantander / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-
-                    case Bancos.Bradesco:
-                        loan.a = 1 + (loan.VehfeeBradesco / 100);
-                        loan.b = Math.Pow(loan.a, loan.Anos);
-                        loan.valorTotalPago = loan.b * loan.Valor;
-                        loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
-                        loan.valorJuros = loan.valorTotalPago - loan.Valor;
-                        break;
-                }
-            }
-                return View(loan);
+            return View(loan);
         }
     }
 }

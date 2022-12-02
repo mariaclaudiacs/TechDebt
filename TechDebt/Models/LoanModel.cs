@@ -25,5 +25,80 @@ namespace TechDebt.Models
 		public double valorJuros { get; set; }
 		public Bancos Banco { get; set; }
 		public Modalidades Modalidade { get; set; }
+
+		public void CalculoPerfee(LoanModel loan)
+        {
+            switch (loan.Banco)
+            {
+                case Bancos.Caixa:
+                    loan.a = 1 + (loan.PerfeeCaixa / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Itau:
+                    loan.a = 1 + (loan.PerfeeItau / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Santander:
+                    loan.a = 1 + (loan.PerfeeSantander / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Bradesco:
+                    loan.a = 1 + (loan.PerfeeBradesco / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+            }
+        }
+        public void CalculoVehfee(LoanModel loan)
+        {
+            switch (loan.Banco)
+            {
+                case Bancos.Caixa:
+                    loan.a = 1 + (loan.VehfeeCaixa / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Itau:
+                    loan.a = 1 + (loan.VehfeeItau / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Santander:
+                    loan.a = 1 + (loan.VehfeeSantander / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+
+                case Bancos.Bradesco:
+                    loan.a = 1 + (loan.VehfeeBradesco / 100);
+                    loan.b = Math.Pow(loan.a, loan.Anos);
+                    loan.valorTotalPago = loan.b * loan.Valor;
+                    loan.valorParcela = loan.valorTotalPago / (loan.Anos * 12);
+                    loan.valorJuros = loan.valorTotalPago - loan.Valor;
+                    break;
+            }
+        }
     }
 }
