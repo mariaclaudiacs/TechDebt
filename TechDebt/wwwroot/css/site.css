@@ -17,7 +17,7 @@ html {
 body {
     font-family: monospace;
     margin-bottom: 60px;
-    border: thin;
+   
 }
 
 .main-body-maria {
@@ -37,14 +37,6 @@ body {
 .navbar-nav flex-grow-1 {
     color: antiquewhite;
 }
-
-a {
-    color: navajowhite;
-}
-
-    a:hover {
-        color: lightyellow;
-    }
 
 .main-header-maria {
     background-color: crimson;
@@ -78,10 +70,6 @@ tr {
 }
 
 
-.p-2 bd-highlight 1 {
-    padding-right: 570px;
-}
-
 .HomeText {
     position: absolute;
     left: 38px;
@@ -98,7 +86,7 @@ tr {
     color: burlywood;
     background-color: darkred;
     position: absolute;
-    left: 70px; 
+    left: 70px;
     top: 200px;
 }
 
@@ -116,39 +104,40 @@ tr {
 
 .mainContainer {
     display: flex;
-   
 }
 
 .sideContainer {
     padding: 6px;
-    width:90%;
+    width: 90%;
     display: inline;
-    background-color: #fff7eb;
+    background-color: rgb(237, 230, 224);
     border: 5px solid brown;
     align-items: center;
     justify-content: center;
 }
 
 #div2 {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:1000px;
+    width: 1000px;
 }
 
-.formulario{
-    width:400px;
+.formulario {
+    width: 400px;
 }
+
 .button {
- 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #Colorbutton {
     color: burlywood;
     background-color: darkred
 }
+
 .ContainerSimulador {
     align-items: center;
     justify-content: center;
@@ -159,30 +148,32 @@ tr {
 .FormularioOptions {
     background-color: #fff7eb;
     border: 1px solid brown;
-
     padding: 30px;
     background-color: #fff7eb;
     border: 5px solid brown;
     width: 400px;
     text-align: left;
+    font-family: monospace;
 }
-.FormularioButtons{
-    text-align:center;
 
+.FormularioButtons {
+    text-align: center;
 }
+
 .form-floating > .bi-calendar-date + .datepicker_input + label {
     padding-left: 3.5rem;
     z-index: 3;
 }
-.mainupdate{
-display:flex;
-       align-items: center;
+
+.mainupdate {
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
+
 .formupdate {
-  
-  
 }
+
 .formsoption {
     background-color: #fff7eb;
     border: 1px solid brown;
@@ -192,3 +183,155 @@ display:flex;
     width: 600px;
     text-align: left;
 }
+
+#botao1Simulacao {
+    background-color: coral;
+    color: saddlebrown;
+    position: relative;
+    right: 25px;
+}
+
+
+    #botao1Simulacao:hover {
+        background-color: rgb(190, 4, 61);
+        color: antiquewhite;
+    }
+
+#voltarSimulacao {
+    background-color: burlywood;
+    color: floralwhite;
+    width: 85px;
+}
+
+    #voltarSimulacao:hover {
+        background-color: khaki;
+        color: rosybrown;
+    }
+
+h5 {
+    color: coral;
+    text-align: center;
+    font-family: monospace;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+p {
+    font-family: monospace;
+}
+
+.linksDev {
+    color: rgb(200, 118, 49);
+}
+
+.linksDev:hover{
+    color: crimson;
+}
+
+#divDev {
+    border-color: rosybrown;
+    border-top-style: outset;
+    border-bottom-style: outset;
+    border-left-style: outset;
+    border-right-style: outset;
+}
+
+ul{
+    color:saddlebrown;
+}
+
+#botao1CriacaoBanco {
+    background-color: coral;
+    color: saddlebrown;
+  
+}
+
+#botao1CriacaoBanco:hover {
+    background-color: rgb(190, 4, 61);
+    color: antiquewhite;
+}
+
+
+#botao2CriacaoBanco {
+    background-color: burlywood;
+    color: floralwhite;
+    position:relative;
+    left:25px;
+}
+
+#botao2CriacaoBanco:hover {
+    background-color: khaki;
+    color: rosybrown;
+}
+
+input#name.form-control{
+    width:450px;
+}
+
+input#Perfee.form-control {
+    width: 450px;
+}
+
+.divAdicionandoBanco{
+    position:relative;
+    left:420px;
+    top:50px;
+    font-family:monospace;
+}
+
+h3{
+    font-family:monospace;
+}
+
+
+#botaoEditarBanco{
+    background-color: orange;
+    color: whitesmoke;
+}
+
+#botaoEditarBanco:hover {
+    background-color: darkorange;
+    color: lightyellow;
+}
+
+#botaoExcluirBanco{
+    background-color:darkred;
+    color:whitesmoke;
+}
+
+#botaoExcluirBanco:hover{
+    background-color: red;
+    color: whitesmoke;
+}
+
+#botaoNovoBanco {
+    background-color: darkcyan;
+}
+
+#botaoExcluirConfirmacao {
+    background-color: darkred;
+    color: whitesmoke;
+    position:relative;
+    top:50px;
+    right:50px;
+}
+
+    #botaoExcluirConfirmacao:hover {
+        background-color: red;
+        color: whitesmoke;
+    }
+
+#botaoConfirmarExclusao {
+    background-color: orange;
+    color: whitesmoke;
+    position: relative;
+    top: 50px;
+    left:50px;
+}
+
+    #botaoConfirmarExclusao:hover {
+        background-color: darkorange;
+        color: lightyellow;
+    }

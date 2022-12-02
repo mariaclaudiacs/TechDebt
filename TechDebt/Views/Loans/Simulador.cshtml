@@ -15,18 +15,20 @@
                 <div class="FormularioOptions">
                     <input type="hidden" asp-for="Banco"/>
                     <input type="hidden" asp-for="Modalidade"/>
-                    <label for="valorEmprestimo" class="form-label">Valor do Empréstimo</label>
+                    <label for="valorEmprestimo" class="form-label">Valor do empréstimo:</label>
                     <input asp-for="Valor" type="text" class="form-control" id="valorEmprestimo">
                     <div class="mb-3">
-                        <label for="parcelas" class="form-label">Número de Anos</label>
+                        <label for="parcelas" class="form-label">Número de anos desejado:</label>
                         <input asp-for="Anos" type="number" class="form-control" id="parcelas">
                     </div>
                     <br>
                     <div class="FormularioButtons">
-                        <button type="submit" style=" background-color: #2be62b; color: black;" class="btn" asp-action="Simulador">
+                        <button id="botao1Simulacao" type="submit" class="btn" asp-action="Simulador">
                             Concluir
                         </button>
-                        <a class="btn btn-secondary" style="background-color: #fd3232;" asp-controller="Home" asp-action="Index">Voltar</a>
+                        <button id="voltarSimulacao" type="submit" class="btn" asp-controller="Home" asp-action="Index">
+                            Voltar
+                            </button>
                     </div>
                     <br>
                     <div class="mb-3">
