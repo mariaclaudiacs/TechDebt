@@ -8,8 +8,15 @@ namespace TechDebt.Controllers
     {
         public IActionResult Index()
         {
-            var model = new UsersModel();
-            return View(model);
+            if (LoginControl._UserLogged == 0)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            else
+            {
+                var model = new UsersModel();
+                return View(model);
+            }
         }
 
         public IActionResult Add()
@@ -28,7 +35,6 @@ namespace TechDebt.Controllers
                 Senha = userModel.Senha,
                 Email = userModel.Email
             };
-            // Criar Usuário
             user.Create();
             return RedirectToAction("Index");
         }

@@ -8,8 +8,15 @@ namespace TechDebt.Controllers
     {
         public IActionResult Index()
         {
-            var model = new BanksModel();
-            return View(model);
+            if (LoginControl._UserLogged == 0)
+            {
+                return RedirectToAction("Index", "Login2");
+            }
+            else
+            {
+                var model = new BanksModel();
+                return View(model);
+            }
         }
 
         public IActionResult AddBank()
