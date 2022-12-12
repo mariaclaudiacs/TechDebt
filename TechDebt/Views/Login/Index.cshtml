@@ -7,16 +7,16 @@
 <form class="loginPage" asp-controller="Login" asp-action="Entrar1" method="post">
 <h2>Login</h2>
   <div class="form-outline mb-4">
+        <label class="form-label" for="login">Usuário:</label>
     <input type="text" id="login" class="form-control" asp-for="Login"/>
-        <label class="form-label" for="login">Usuário</label>
         @Html.ValidationMessageFor(x => x.Login)
   </div>
 
   <div class="form-outline mb-4">
+        <label class="form-label" for="password">Senha:</label>
         <input type="password" id="password" class="form-control" asp-for="Senha"/>
-        <label class="form-label" for="password">Senha</label>
         @Html.ValidationMessageFor(x => x.Senha)
   </div>
 
-  <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+    <button id="botao1Simulacao" style="position:relative; left:0px;" submit" class="btn">Entrar</button>
 </form>

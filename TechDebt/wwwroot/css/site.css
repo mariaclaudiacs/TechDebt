@@ -281,6 +281,14 @@ input#Perfee.form-control {
     width: 450px;
 }
 
+input#login.form-control {
+    width: 450px;
+}
+
+input#password.form-control {
+    width: 450px;
+}
+
 .divAdicionandoBanco {
     font-family: monospace;
     background-color: #fff7eb;
