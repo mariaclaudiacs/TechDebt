@@ -1,22 +1,5 @@
-﻿@model LoginModel
-
-@{
+﻿@{
     ViewData["Title"] = "Login";
 }
 
-<form class="loginPage" asp-controller="Login" asp-action="Entrar2" method="post">
-    <h2>Login</h2>
-    <div class="form-outline mb-4">
-        <label class="form-label" for="login">Usuário:</label>
-        <input type="text" id="login" class="form-control" asp-for="Login" />
-        @Html.ValidationMessageFor(x => x.Login)
-    </div>
-
-    <div class="form-outline mb-4">
-        <label class="form-label" for="password">Senha:</label>
-        <input type="password" id="password" class="form-control" asp-for="Senha" />
-        @Html.ValidationMessageFor(x => x.Senha)
-    </div>
-    <button id="botao1Simulacao" style="position:relative; left:0px;" type="submit" class="btn">Entrar</button>
-
-</form>
+<p>Realize o login na aba de usuários para acessar este conteúdo!</p>
