@@ -15,10 +15,10 @@
                 <div class="FormularioOptions">
                     <input type="hidden" asp-for="Banco"/>
                     <input type="hidden" asp-for="Modalidade"/>
-                    <label for="valorEmprestimo" class="form-label">Valor do Empréstimo</label>
+                    <label for="valorEmprestimo" class="form-label">Valor do empréstimo:</label>
                     <input asp-for="Valor" type="text" class="form-control" id="valorEmprestimo">
                     <div class="mb-3">
-                        <label for="parcelas" class="form-label">Número de Anos</label>
+                        <label for="parcelas" class="form-label">Número de anos:</label>
                         <input asp-for="Anos" type="text" class="form-control" id="parcelas">
                     </div>
                     <br>
@@ -30,16 +30,16 @@
                     </div>
                     <br>
                     <div class="mb-3">
-                        <label for="result" class="form-label">Valor do Empréstimo</label>
+                        <label for="result" class="form-label">Valor do empréstimo:</label>
                         <input disabled asp-for="Valor" type="text" class="form-control" id="result">
 
-                        <label for="result2" class="form-label">Valor da Parcela</label>
+                        <label for="result2" class="form-label">Valor da parcela:</label>
                         <input disabled asp-for="valorParcela" type="text" class="form-control" id="result2">
 
-                        <label for="result3" class="form-label">Total Pago</label>
+                        <label for="result3" class="form-label">Total pago:</label>
                         <input disabled asp-for="valorTotalPago" asp-action="" type="text" class="form-control" id="result3">
 
-                        <label for="result4" class="form-label">Juros</label>
+                        <label for="result4" class="form-label">Juros:</label>
                         <input disabled asp-for="valorJuros" asp-action="" type="text" class="form-control" id="result4">
 
                     </div>

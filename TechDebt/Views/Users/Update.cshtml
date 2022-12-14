@@ -4,23 +4,23 @@
 }
 <div>
     <div class="mainupdate">
-        <div class="formsoption">
-    <h3 class="text-center">Alterando Usuários</h3>
-    <form asp-controller="Users" asp-action="Update" method="post">
-        <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" class="form-control" id="name"style="width:530px;height:38.48px;" asp-for="Nome">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Senha:</label>
-            <input type="password" class="form-control" id="password" asp-for="Senha">
-        </div>
-        <br>
+        <div class="divAdicionandoBanco">
+            <h3 class="text-center">Alterar dados</h3>
+            <form asp-controller="Users" asp-action="Update" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" ;" asp-for="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Senha:</label>
+                    <input type="password" class="form-control" id="password" asp-for="Senha">
+                </div>
+                <br>
                 <div class="ButtonUpd">
                     <button id="botao1Simulacao" type="submit" class="btn" style="position:relative;left:0px">Enviar</button>
                     <a id="voltarSimulacao" class="btn " 1 asp-controller="Users" asp-action="Index" style="position:relative" ;>Voltar</a>
+                </div>
+            </form>
         </div>
-    </form>
-    </div>
     </div>
 </div>

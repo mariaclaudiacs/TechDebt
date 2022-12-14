@@ -4,12 +4,12 @@
 }
 
 <div class="text-center">
-    <h3>Confirmação de exclusão</h3>
+    <h1 style="color:red;">Confirmação de exclusão</h1>
     <form asp-controller="Banks" asp-action="DeleteBank" method="post">
-        <p>Você tem certeza que quer deletar o banco @Model.Nome?</p>
-
-        <a id="botaoExcluirConfirmacao" class="btn" asp-controller="Banks" asp-action="Index">Não</a>
-        <button id="botaoConfirmarExclusao" type="submit" class="btn">Sim</button>
-
+        <br>
+        <h4>Você tem certeza que quer deletar o banco @Model.Nome?</h4>
+        <br />
+        <a id="botaoExcluirConfirmacao" style="position: relative; right:50;" class="btn" asp-controller="Banks" asp-action="Index">Não</a>
+        <button id="botaoConfirmarExclusao" style="position: relative; left:50;" type="submit" class="btn">Sim</button>
     </form>
 </div>

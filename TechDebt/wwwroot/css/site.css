@@ -1,11 +1,9 @@
 html {
-   
-    font-family:monospace;
+    font-family: monospace;
 }
 
 @media (min-width: 768px) {
     html {
-     
         font-size: 16px;
     }
 }
@@ -14,13 +12,11 @@ html {
     position: relative;
     min-height: 100%;
     color: crimson;
-  
 }
 
 body {
     font-family: monospace;
     margin-bottom: 60px;
-   
 }
 
 .main-body-maria {
@@ -49,8 +45,8 @@ ul {
     color: antiquewhite;
 }
 
-table{
-    font-family:monospace;
+table {
+    font-family: monospace;
 }
 
 tbody {
@@ -111,8 +107,6 @@ tr {
 
 .mainContainer {
     display: flex;
-    
-    
 }
 
 .sideContainer {
@@ -175,9 +169,10 @@ tr {
 }
 
 .mainupdate {
-    display: flex;
+   display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 
@@ -233,9 +228,9 @@ p {
     color: rgb(200, 118, 49);
 }
 
-.linksDev:hover{
-    color: crimson;
-}
+    .linksDev:hover {
+        color: crimson;
+    }
 
 #divDev {
     border-color: rosybrown;
@@ -243,38 +238,39 @@ p {
     border-bottom-style: outset;
     border-left-style: outset;
     border-right-style: outset;
+    text-align: center;
 }
 
-ul{
-    color:saddlebrown;
+
+ul {
+    color: saddlebrown;
 }
 
 #botao1CriacaoBanco {
     background-color: coral;
     color: saddlebrown;
-  
 }
 
-#botao1CriacaoBanco:hover {
-    background-color: rgb(190, 4, 61);
-    color: antiquewhite;
-}
+    #botao1CriacaoBanco:hover {
+        background-color: rgb(190, 4, 61);
+        color: antiquewhite;
+    }
 
 
 #botao2CriacaoBanco {
     background-color: burlywood;
     color: floralwhite;
-    position:relative;
-    left:25px;
+    position: relative;
+    left: 25px;
 }
 
-#botao2CriacaoBanco:hover {
-    background-color: khaki;
-    color: rosybrown;
-}
+    #botao2CriacaoBanco:hover {
+        background-color: khaki;
+        color: rosybrown;
+    }
 
-input#name.form-control{
-    width:450px;
+input#name.form-control {
+    width: 450px;
 }
 
 input#Perfee.form-control {
@@ -289,40 +285,44 @@ input#password.form-control {
     width: 450px;
 }
 
+input#email.form-control {
+    width: 450px;
+}
+
 .divAdicionandoBanco {
     font-family: monospace;
     background-color: #fff7eb;
     padding: 30px;
     border: 5px solid brown;
     text-align: left;
-    align-items:center;
-    justify-content:center
+    align-items: center;
+    justify-content: center
 }
 
-h3{
-    font-family:monospace;
+h3 {
+    font-family: monospace;
 }
 
 
-#botaoEditarBanco{
+#botaoEditarBanco {
     background-color: orange;
     color: whitesmoke;
 }
 
-#botaoEditarBanco:hover {
-    background-color: darkorange;
-    color: lightyellow;
-}
+    #botaoEditarBanco:hover {
+        background-color: darkorange;
+        color: lightyellow;
+    }
 
-#botaoExcluirBanco{
-    background-color:darkred;
-    color:whitesmoke;
-}
-
-#botaoExcluirBanco:hover{
-    background-color: red;
+#botaoExcluirBanco {
+    background-color: darkred;
     color: whitesmoke;
 }
+
+    #botaoExcluirBanco:hover {
+        background-color: red;
+        color: whitesmoke;
+    }
 
 #botaoNovoBanco {
     background-color: darkcyan;
@@ -331,9 +331,8 @@ h3{
 #botaoExcluirConfirmacao {
     background-color: darkred;
     color: whitesmoke;
-    position:relative;
-    top:50px;
-   
+    position: relative;
+    top: 50px;
 }
 
     #botaoExcluirConfirmacao:hover {
@@ -346,28 +345,35 @@ h3{
     color: whitesmoke;
     position: relative;
     top: 50px;
-    left:50px;
+    left: 50px;
 }
 
     #botaoConfirmarExclusao:hover {
         background-color: darkorange;
         color: lightyellow;
     }
+
 .ButtonUpd {
     display: flex;
     align-items: center;
-
-    justify-content:space-between
-
+    justify-content: space-between
 }
-.Icon{
- width:250px;
- height:60px;
+
+.Icon {
+    width: 250px;
+    height: 60px;
 }
+
 a.site-logo {
     background: url(/LogoTech.png) no-repeat top left;
     display: block;
     width: 100px;
     height: 100px;
     text-indent: -9999px; /*hides the link text*/
-} 
+}
+
+form.loginPage{
+   padding-left:370px;
+   padding-top: 70px;
+}
+

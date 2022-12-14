@@ -4,16 +4,16 @@
 }
 <div>
     <div class="mainupdate">
-        <div class="formsoption">
-            <h3 class="text-center">Criar Usuário</h3>
+        <div class="divAdicionandoBanco">
+            <h3 class="text-center">Cadastrar usuário</h3>
 
             <form asp-controller="Users" asp-action="Add" method="post">
                 <div class="form-group">
                     <label for="name">Nome:</label>
-                    <input type="text" class="form-control" id="name" style="width:530px;height:38.48px;" asp-for="Nome">
+                    <input type="text" class="form-control" id="name" asp-for="Nome">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Email:</label>
+                    <label for="exampleInputPassword1">E-mail:</label>
                     <input type="text" class="form-control" id="email" asp-for="Email">
                 </div>
                 <br>
@@ -23,8 +23,8 @@
                 </div>
                 <br>
                 <div class="ButtonUpd">
-                    <button id="botao1Simulacao" type="submit" class="btn" style="position:relative; left:30px; width:80px;">Criar</button>
-                    <a id="voltarSimulacao" class="btn" asp-controller="Users" asp-action="Index" style="position:relative; right:20px;">Voltar</a>
+                    <button id="botao1Simulacao" type="submit" class="btn" style="position:relative; left:0px;">Cadastrar</button>
+                    <a id="voltarSimulacao" class="btn" asp-controller="Users" asp-action="Index" style="position:relative; right:0px;">Voltar</a>
                 </div>
             </form>
 </div>

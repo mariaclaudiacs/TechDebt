@@ -4,29 +4,29 @@
 }
 <div>
     <div class="mainupdate">
-            <form asp-controller="Banks" asp-action="UpdateBank" method="post">
-                <div class="formsoption">
-    <h3 class="text-center">Alterando Bancos</h3>
-                    <div class="form-group">
+        <form asp-controller="Banks" asp-action="UpdateBank" method="post">
+            <div class="divAdicionandoBanco">
+                <h3 class="text-center">Alterar dados</h3>
+                <div class="form-group">
 
-                        <label for="name">Nome:</label>
-                        <input type="text" style="width:530px;height:38.48px" class="form-control" id="name" asp-for="Nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="tjpessoalam">Taxa de Juros pessoal a.a:</label>
-                        <input type="text" class="form-control" id="tjpessoal" asp-for="Perfee">
-                    </div>
-                    <div>
-                        <label for="tjveicularam">Taxa de Juros veicular a.a:</label>
-                        <input type="text" class="form-control" id="tjveicular" asp-for="VehFee">
-                    </div>
-                    <br>
-                    <div class="ButtonUpd">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" asp-for="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="tjpessoalam">Taxa de Juros pessoal a.a:</label>
+                    <input type="text" class="form-control" id="tjpessoal" asp-for="Perfee">
+                </div>
+                <div>
+                    <label for="tjveicularam">Taxa de Juros veicular a.a:</label>
+                    <input type="text" class="form-control" id="tjveicular" asp-for="VehFee">
+                </div>
+                <br>
+                <div class="ButtonUpd">
                     <button id="botao1Simulacao" type="submit" class="btn" style="position:relative;left:0px">Enviar</button>
-                    <a id="voltarSimulacao" class="btn " 1 asp-controller="Banks" asp-action="Index" style="position:relative";>Voltar</a>
-                        </div>
-                    </div>
-            </form>
-        </div>
+                    <a id="voltarSimulacao" class="btn " 1 asp-controller="Banks" asp-action="Index" style="position:relative" ;>Voltar</a>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
 </div>
